@@ -51,8 +51,8 @@ namespace TransportLibrary
             {
                 if (!noDuplicate.ContainsKey(stop.name))
                 {
-                    List<String> listeLignes = GetLines(stop.lines);
-                    noDuplicate.Add(stop.name, listeLignes);
+                    //List<String> listeLignes = GetLines(stop.lines);
+                    noDuplicate.Add(stop.name, stop.lines);
                 }
                 //Mon arret est déjà dans la liste, je vais donc vérifier que toutes les lignes de l'arrêt sont déjà dans la liste
                 else
@@ -60,13 +60,11 @@ namespace TransportLibrary
                     //Boucler sur les lignes de l'arrêt
                     foreach (String line in stop.lines)
                     {
-                        int d = line.IndexOf(":");
-                        String numLine = line.Substring(d + 1);
                         //Si la ligne n'est pas déjà dans la liste des lignes de l'arret dans le Dictionary (liste sans doublons)
-                        if (!noDuplicate[stop.name].Contains(numLine))
+                        if (!noDuplicate[stop.name].Contains(line))
                         {
                             //J'ajoute maligne dans le "Value" de mon arrêt à la liste des lignes
-                            noDuplicate[stop.name].Add(numLine);
+                            noDuplicate[stop.name].Add(line);
                         }
                     }
                 }

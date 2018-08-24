@@ -32,12 +32,13 @@ namespace TransportsGrenoble
             foreach (KeyValuePair<String, List<String>> kvp in noDuplicate)
             {
                 Console.WriteLine(kvp.Key);
-                foreach (String val in kvp.Value)
+                foreach (String idLine in kvp.Value)
                 {
-                    Console.WriteLine(val);
+                    DataTypeTransport dataType = new DataTypeTransport();
+                    TypeTransport listQ = dataType.GetTransportType(idLine);
+                    Console.WriteLine(listQ.mode + " - " + listQ.shortName);
                 }
             }
-            
         }
     }
 }

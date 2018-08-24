@@ -18,8 +18,6 @@ namespace TransportLibrary
             WebRequest request = WebRequest.Create(url);
             // Get the response.
             HttpWebResponse response = (HttpWebResponse)request.GetResponse();
-            // Display the status.
-            Console.WriteLine(response.StatusDescription);
             // Get the stream containing content returned by the server.
             Stream dataStream = response.GetResponseStream();
             // Open the stream using a StreamReader for easy access.
