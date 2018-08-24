@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TransportsGrenoble
+namespace TransportLibrary
 {
-    class Ligne
+    public class Ligne
     {
         public string id { get; set; }
         public string name { get; set; }

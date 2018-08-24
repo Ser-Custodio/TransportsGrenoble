@@ -8,3 +8,5 @@ P:\12 - C# .Net\TransportsGrenoble\TransportsGrenoble\obj\Debug\TransportsGrenob
 P:\12 - C# .Net\TransportsGrenoble\TransportsGrenoble\bin\Debug\Newtonsoft.Json.dll
 P:\12 - C# .Net\TransportsGrenoble\TransportsGrenoble\bin\Debug\Newtonsoft.Json.xml
 P:\12 - C# .Net\TransportsGrenoble\TransportsGrenoble\obj\Debug\TransportsGrenoble.csproj.CopyComplete
+P:\12 - C# .Net\TransportsGrenoble\TransportsGrenoble\bin\Debug\TransportLibrary.dll
+P:\12 - C# .Net\TransportsGrenoble\TransportsGrenoble\bin\Debug\TransportLibrary.pdb
