@@ -12,15 +12,9 @@ namespace TransportLibrary.Tests
     public class DataLignesProximiteTests
     {
         [TestMethod()]
-        public void proximiteTest()
-        {
-            Assert.Fail();
-        }
-
-        [TestMethod()]
         public void DataNoDuplicatesTest()
         {
-
+            Assert.Fail();
         }
     }
 }

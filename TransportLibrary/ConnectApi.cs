@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace TransportLibrary
 {
-    public class ConnectApi
+    public class ConnectApi : IConnectApi
     {
         public String ConnectionApi(String url)
         {
