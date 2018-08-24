@@ -36,7 +36,7 @@ namespace TransportsGrenoble
                 {
                     DataTypeTransport dataType = new DataTypeTransport();
                     TypeTransport listQ = dataType.GetTransportType(idLine);
-                    Console.WriteLine(listQ.mode + " - " + listQ.shortName);
+                    Console.WriteLine(listQ.mode + " - " + listQ.shortName +" - "+listQ.longName);
                 }
             }
         }
