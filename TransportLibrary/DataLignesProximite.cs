@@ -23,6 +23,26 @@ namespace TransportLibrary
             return stopList;
         }
 
+        public List<String> GetLines(List<String> stopList)
+        {
+            //Liste vide pour stocker les lignes d'un arret
+            List<String> listeLignes = new List<String>();
+
+            //Boucler sur les lignes de l'arrêt pour les ajouter dans la liste
+            foreach (String line in stopList)
+            {
+                int d = line.IndexOf(":");
+                String numLine = line.Substring(d + 1);
+                //Si la ligne n'est pas déjà dans la liste des lignes
+                if (!listeLignes.Contains(numLine))
+                {
+                    //Alors j'ajoute la ligne dans la liste des lignes de cet arret
+                    listeLignes.Add(numLine);
+                }
+            }
+            return listeLignes;
+        }
+
         public Dictionary<String, List<String>> DataNoDuplicates(String lon, String lat, Int32 distance)
         {
             List<Ligne> stopList = proximite(lon, lat, distance);
@@ -31,22 +51,7 @@ namespace TransportLibrary
             {
                 if (!noDuplicate.ContainsKey(stop.name))
                 {
-                    //Liste vide pour stocker les lignes d'un arret
-                    List<String> listeLignes = new List<String>();
-
-                    //Boucler sur les lignes de l'arrêt pour les ajouter dans la liste
-                    foreach (String line in stop.lines)
-                    {
-                        int d = line.IndexOf(":");
-                        String numLine = line.Substring(d + 1);
-                        //Si la ligne n'est pas déjà dans la liste des lignes
-                        if (!listeLignes.Contains(numLine))
-                        {
-                            //Alors j'ajoute la ligne dans la liste des lignes de cet arret
-                            listeLignes.Add(numLine);
-                        }
-                    }
-                    //Ajouter dans la liste sans doublons la paire "Key : nom arret, value : listeLignes"
+                    List<String> listeLignes = GetLines(stop.lines);
                     noDuplicate.Add(stop.name, listeLignes);
                 }
                 //Mon arret est déjà dans la liste, je vais donc vérifier que toutes les lignes de l'arrêt sont déjà dans la liste
