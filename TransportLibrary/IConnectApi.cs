@@ -1,7 +1,9 @@
-﻿namespace TransportLibrary
+﻿using System;
+
+namespace TransportLibrary
 {
     public interface IConnectApi
     {
-        string ConnectionApi(string url);
+        String ConnectionApi(String url);
     }
 }

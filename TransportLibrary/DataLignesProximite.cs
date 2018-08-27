@@ -10,12 +10,19 @@ namespace TransportLibrary
 {
     public class DataLignesProximite
     {
-        public List<Ligne> proximite(String lon, String lat, Int32 distance) { 
+        private IConnectApi connectApi;
+
+        public DataLignesProximite(IConnectApi connectApi)
+        {
+            this.connectApi = connectApi;
+        }
+
+        private List<Ligne> proximite(String lon, String lat, Int32 distance) { 
             // New instance of the connection
-            ConnectApi conect = new ConnectApi();
+            //ConnectApi conect = new ConnectApi();
 
             String url = "http://data.metromobilite.fr/api/linesNear/json?x=" + lon + "&y=" + lat + "&dist=" + distance + "&details=true";
-            String responseFromServer = conect.ConnectionApi(url);
+            String responseFromServer = connectApi.ConnectionApi(url);
             
             // Convert to C# object
             List<Ligne> stopList = JsonConvert.DeserializeObject<List<Ligne>>(responseFromServer);
@@ -23,7 +30,7 @@ namespace TransportLibrary
             return stopList;
         }
 
-        public List<String> GetLines(List<String> stopList)
+        private List<String> GetLines(List<String> stopList)
         {
             //Liste vide pour stocker les lignes d'un arret
             List<String> listeLignes = new List<String>();

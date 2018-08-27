@@ -15,8 +15,9 @@ namespace TransportsGrenoble
     {
         static void Main(string[] args)
         {
+            IConnectApi connectApi = new ConnectApi();
             // New instance 
-            DataLignesProximite dataLignesProximite = new DataLignesProximite();
+            DataLignesProximite dataLignesProximite = new DataLignesProximite(connectApi);
 
             // Give the coordinates of current location
             String lat = "45.185476";
