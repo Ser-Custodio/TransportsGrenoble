@@ -16,7 +16,7 @@
 
     <Grid >
         <StackPanel>
-            <Grid>
+            <Grid Margin="0,20,0,0">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="70*"></ColumnDefinition>
                     <ColumnDefinition Width="70*"></ColumnDefinition>
@@ -30,16 +30,16 @@
                 <Grid.RowDefinitions>
                     <RowDefinition></RowDefinition>
                 </Grid.RowDefinitions>
-                <Label FontSize="20" Grid.Column="0" Grid.Row="0">Latitude:</Label>
+                <Label FontSize="20" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Right">Latitude:</Label>
                 <TextBox FontSize="15" Grid.Column="1" Grid.Row="0" Text="{Binding Path=Latitude}" Padding="10,7,0,0"/>
-                <Label FontSize="20" Grid.Column="2" Grid.Row="0">Longitude:</Label>
+                <Label FontSize="20" Grid.Column="2" Grid.Row="0" HorizontalAlignment="Right">Longitude:</Label>
                 <TextBox FontSize="15" Grid.Column="3" Grid.Row="0" Text="{Binding Path=Longitude}" Padding="10,7,0,0"/>
-                <Label FontSize="20" Grid.Column="4" Grid.Row="0">Distance:</Label>
+                <Label FontSize="20" Grid.Column="4" Grid.Row="0" HorizontalAlignment="Right">Distance:</Label>
                 <TextBox FontSize="15" Grid.Column="5" Grid.Row="0" Text="{Binding Path=Distance}" Padding="10,7,0,0"/>
                 <Button Command="{Binding Path=FindLignes}" FontSize="15" Grid.Column="6" Grid.Row="0" Margin="20,0,0,0">Rechercher</Button>
             </Grid>
         </StackPanel>
-        <StackPanel Margin="0,50,0,0">
+        <StackPanel Margin="0,70,0,0">
             <TextBlock Text="Liste des Arrets:" FontSize="35" FontWeight="Bold" FontStyle="Italic" Foreground="DarkBlue"/>
             <ItemsControl ItemsSource="{Binding Path= Stations}">
                 <ItemsControl.ItemTemplate>
