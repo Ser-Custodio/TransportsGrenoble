@@ -19,3 +19,5 @@ P:\12 - C# .Net\TransportsGrenoble\TransportLibraryTests1\bin\Debug\Newtonsoft.J
 P:\12 - C# .Net\TransportsGrenoble\TransportLibraryTests1\obj\Debug\TransportLibraryTests1.csproj.CopyComplete
 P:\12 - C# .Net\TransportsGrenoble\TransportLibraryTests1\obj\Debug\TransportLibraryTests1.dll
 P:\12 - C# .Net\TransportsGrenoble\TransportLibraryTests1\obj\Debug\TransportLibraryTests1.pdb
+P:\12 - C# .Net\TransportsGrenoble\TransportLibraryTests1\obj\Debug\TransportLibraryTests1.Ressources.resources
+P:\12 - C# .Net\TransportsGrenoble\TransportLibraryTests1\obj\Debug\TransportLibraryTests1.csproj.GenerateResource.cache

@@ -2,7 +2,6 @@ P:\12 - C# .Net\TransportsGrenoble\TransportLibrary\bin\Release\TransportLibrary
 P:\12 - C# .Net\TransportsGrenoble\TransportLibrary\bin\Release\TransportLibrary.pdb
 P:\12 - C# .Net\TransportsGrenoble\TransportLibrary\bin\Release\Newtonsoft.Json.dll
 P:\12 - C# .Net\TransportsGrenoble\TransportLibrary\bin\Release\Newtonsoft.Json.xml
-P:\12 - C# .Net\TransportsGrenoble\TransportLibrary\obj\Release\TransportLibrary.csprojAssemblyReference.cache
 P:\12 - C# .Net\TransportsGrenoble\TransportLibrary\obj\Release\TransportLibrary.csproj.CoreCompileInputs.cache
 P:\12 - C# .Net\TransportsGrenoble\TransportLibrary\obj\Release\TransportLibrary.csproj.CopyComplete
 P:\12 - C# .Net\TransportsGrenoble\TransportLibrary\obj\Release\TransportLibrary.dll

@@ -8,8 +8,6 @@ namespace TransportLibrary
 {
     public class Ligne
     {
-        public string image;
-
         public string id { get; set; }
         public string shortName { get; set; }
         public string longName { get; set; }
@@ -25,19 +23,15 @@ namespace TransportLibrary
             }
         }
 
-        public string Image
+        public Uri Image
         {
             get
             {
-                
-                return image;
-            }
-            set
-            {
+                // Solution trouvée par MARION CHAPUIS
                 if (mode == "BUS")
-                    image = "icon.png";
+                    return new Uri(@"\images\bus2.png", UriKind.RelativeOrAbsolute);
                 else
-                    image = "i.png";
+                    return new Uri(@"\images\tram2.png", UriKind.RelativeOrAbsolute);
             }
         }
     }

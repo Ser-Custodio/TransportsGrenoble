@@ -111,10 +111,29 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="icon.png" />
+    <Resource Include="Images\icon.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="i.png" />
+    <Resource Include="Images\i.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\logo_metro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\bus.png" />
+    <Resource Include="Images\tram.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\tram1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\bus1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\bus2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\tram2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
