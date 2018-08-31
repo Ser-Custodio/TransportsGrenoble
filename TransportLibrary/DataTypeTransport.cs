@@ -9,16 +9,21 @@ namespace TransportLibrary
 {
     public class DataTypeTransport
     {
-        public TypeTransport GetTransportType(String lineId)
+        private IConnectApi connectApi;
+
+        public DataTypeTransport(IConnectApi connectApi)
         {
-            // New instance of the connection
-            ConnectApi conect = new ConnectApi();
+            this.connectApi = connectApi;
+        }
+
+        public Ligne GetTransportType(String lineId)
+        {
 
             String url = "https://data.metromobilite.fr/api/routers/default/index/routes?codes="+lineId;
-            String responseFromServer = conect.ConnectionApi(url);
+            String responseFromServer = connectApi.ConnectionApi(url);
 
             // Convert to C# object
-            List<TypeTransport> typeList = JsonConvert.DeserializeObject<List<TypeTransport>>(responseFromServer);
+            List<Ligne> typeList = JsonConvert.DeserializeObject<List<Ligne>>(responseFromServer);
             return typeList[0];
         }
         

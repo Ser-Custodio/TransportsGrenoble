@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TransportLibrary", "Transpo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TransportLibraryTests1", "TransportLibraryTests1\TransportLibraryTests1.csproj", "{40F84219-141A-4BB6-9DE5-6BEBA903BDDE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TransportInterfaceGraphique", "TransportInterfaceGraphique\TransportInterfaceGraphique.csproj", "{2DDE029D-9708-4279-AF9A-923A036DA482}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{40F84219-141A-4BB6-9DE5-6BEBA903BDDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{40F84219-141A-4BB6-9DE5-6BEBA903BDDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{40F84219-141A-4BB6-9DE5-6BEBA903BDDE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2DDE029D-9708-4279-AF9A-923A036DA482}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DDE029D-9708-4279-AF9A-923A036DA482}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DDE029D-9708-4279-AF9A-923A036DA482}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DDE029D-9708-4279-AF9A-923A036DA482}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -25,7 +25,7 @@ namespace TransportLibrary.Tests
             String longitude = "5.727772";
             Int32 distance = 400;
             //Stocker le résultat de la méthode testée
-            Dictionary<String, List<String>> resultat = dataLignesProximite.DataNoDuplicates(latitude, longitude, distance);
+            Dictionary<String, List<String>> resultat = dataLignesProximite.DataNoDuplicates(longitude, latitude, distance);
             //Vérification du résultat
             Assert.AreEqual(1, resultat.Count);
             Assert.IsTrue(resultat.ContainsKey("GRENOBLE, CASERNE DE BONNE"));

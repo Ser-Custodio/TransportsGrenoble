@@ -17,7 +17,7 @@ namespace TransportLibrary
             this.connectApi = connectApi;
         }
 
-        private List<Ligne> proximite(String lon, String lat, Int32 distance) { 
+        private List<Arret> proximite(String lon, String lat, Int32 distance) { 
             // New instance of the connection
             //ConnectApi conect = new ConnectApi();
 
@@ -25,7 +25,7 @@ namespace TransportLibrary
             String responseFromServer = connectApi.ConnectionApi(url);
             
             // Convert to C# object
-            List<Ligne> stopList = JsonConvert.DeserializeObject<List<Ligne>>(responseFromServer);
+            List<Arret> stopList = JsonConvert.DeserializeObject<List<Arret>>(responseFromServer);
 
             return stopList;
         }
@@ -49,12 +49,12 @@ namespace TransportLibrary
             }
             return listeLignes;
         }
-
+                
         public Dictionary<String, List<String>> DataNoDuplicates(String lon, String lat, Int32 distance)
         {
-            List<Ligne> stopList = proximite(lon, lat, distance);
+            List<Arret> stopList = proximite(lon, lat, distance);
             Dictionary<String, List<String>> noDuplicate = new Dictionary<String, List<String>>();
-            foreach (Ligne stop in stopList)
+            foreach (Arret stop in stopList)
             {
                 if (!noDuplicate.ContainsKey(stop.name))
                 {
@@ -75,8 +75,29 @@ namespace TransportLibrary
                         }
                     }
                 }
+                noDuplicate[stop.name] = noDuplicate[stop.name].Distinct().ToList();
             }
             return noDuplicate;
+        }
+
+        //Récupérer un Dictionnaire <String Arret, List<Ligne>> sans doublons
+        public Dictionary<String, List<Ligne>> GetDataDetailsLigneProximite(String latitude, String longitude, Int32 distance)
+        {
+            Dictionary<String, List<Ligne>> superDico = new Dictionary<String, List<Ligne>>();
+            Dictionary<String, List<String>> dicoDeBase = DataNoDuplicates(latitude, longitude, distance);
+
+            foreach (KeyValuePair<String, List<String>> kvp in dicoDeBase)
+            {
+                List<Ligne> listeLigne = new List<Ligne>();
+                foreach (String idLigne in kvp.Value)
+                {
+                    DataTypeTransport dataType = new DataTypeTransport(new ConnectApi());
+                    Ligne ligne = dataType.GetTransportType(idLigne);
+                    listeLigne.Add(ligne);
+                }
+                superDico.Add(kvp.Key, listeLigne);
+            }
+            return superDico;
         }
     }
 }

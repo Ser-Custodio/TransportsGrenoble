@@ -57,8 +57,14 @@
   </Choose>
   <ItemGroup>
     <Compile Include="DataLignesProximiteTests.cs" />
+    <Compile Include="DataTypeTransportTests.cs" />
     <Compile Include="Fakes\FakeConnectApi.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Ressources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Ressources.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -68,6 +74,12 @@
       <Project>{140548DC-1C7F-493B-AFC1-C66A2A263D98}</Project>
       <Name>TransportLibrary</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Ressources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Ressources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

@@ -23,22 +23,21 @@ namespace TransportsGrenoble
             String lat = "45.185476";
             String lon = "5.727772";
             // Search perimetre
-            Int32 distance = 500;
+            Int32 distance = 400;
 
-            Dictionary<String, List<String>> noDuplicate = dataLignesProximite.DataNoDuplicates(lon, lat, distance);
+            Dictionary<String, List<Ligne>> noDuplicate = dataLignesProximite.GetDataDetailsLigneProximite(lon, lat, distance);
 
             Console.WriteLine("Bienvenue à Grenoble, vous serez toujours en retard avec nous");
             Console.WriteLine("\n LIST OF STOPS IN A 500m RADIUS FROM THE CAMPUS \n");
-            //Parcourir la lite sans doubles (type Dictionary) pour afficher la paire "key - value"
-            foreach (KeyValuePair<String, List<String>> kvp in noDuplicate)
+            //Parcourir la lite sans doublons (type Dictionary) pour afficher la paire "key - value"
+            foreach (KeyValuePair<String, List<Ligne>> kvp in noDuplicate)
             {
-                Console.WriteLine(kvp.Key);
-                foreach (String idLine in kvp.Value)
+                Console.WriteLine("******* " + kvp.Key + " *******");
+                foreach (Ligne ligne in kvp.Value)
                 {
-                    DataTypeTransport dataType = new DataTypeTransport();
-                    TypeTransport listQ = dataType.GetTransportType(idLine);
-                    Console.WriteLine(listQ.mode + " - " + listQ.shortName +" - "+listQ.longName);
+                    Console.WriteLine(ligne.mode + " - " + ligne.shortName + " : " + ligne.longName);
                 }
+                Console.WriteLine("\n");
             }
         }
     }

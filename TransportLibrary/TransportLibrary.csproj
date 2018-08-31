@@ -47,8 +47,8 @@
     <Compile Include="DataLignesProximite.cs" />
     <Compile Include="DataTypeTransport.cs" />
     <Compile Include="IConnectApi.cs" />
-    <Compile Include="TypeTransport.cs" />
     <Compile Include="Ligne.cs" />
+    <Compile Include="Arret.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
